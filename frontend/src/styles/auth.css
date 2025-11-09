@@ -5,6 +5,9 @@ body {
   background-color: #f7f9fc;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-container {
@@ -80,6 +83,7 @@ body {
   padding: 10px;
   background-color: #fff;
   transition: border-color 0.3s ease;
+  color:black ;
 }
 
 .input-icon:hover {

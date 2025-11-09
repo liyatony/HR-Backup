@@ -1,8 +1,9 @@
 // frontend/src/components/auth/Login.js
 import React, { useState } from "react";
-import { FaEnvelope, FaLock } from "react-icons/fa";
+import { FaEnvelope, FaLock, FaRegEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import "../../styles/auth.css"
+import { FaEye } from "react-icons/fa";
+import "../../styles/auth.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -44,6 +45,7 @@ const Login = () => {
               <FaEnvelope className="icon" />
               <input
                 type="email"
+                className="input-icon"
                 placeholder="you@company.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -57,6 +59,7 @@ const Login = () => {
             <div className="input-icon">
               <FaLock className="icon" />
               <input
+                className="input-icon"
                 type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
                 value={password}
@@ -67,7 +70,7 @@ const Login = () => {
                 className="toggle-password"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? "🙈" : "👁️"}
+                {showPassword ? <FaRegEyeSlash /> : <FaEye />}
               </span>
             </div>
           </div>
@@ -95,4 +98,3 @@ const Login = () => {
 };
 
 export default Login;
-
