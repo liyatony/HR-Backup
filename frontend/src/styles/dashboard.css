@@ -882,3 +882,17 @@ body {
 .btn-block {
   width: 100%;
 }
+
+/* Ensure icons inside approve/reject buttons show color */
+.btn-approve svg,
+.btn-reject svg {
+  width: 18px;
+  height: 18px;
+  color: inherit; /* match button text color */
+}
+
+/* On hover - keep icon visible */
+.btn-approve:hover svg,
+.btn-reject:hover svg {
+  color: white;
+}
